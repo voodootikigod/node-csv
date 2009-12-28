@@ -18,6 +18,6 @@ Opens and stream parses a CSV file provided by the first argument value. The sec
   * _strDelimiter_: String delimiter that is used to separate data values within the file. Default is ",", but can be any value.
   * _readAmount_: Number of bytes to read on each cycle. The smaller the value, the faster the 'data' event is emitted, but it will be more processor and memory intensive. Default is recommended.
 
-`csv.parse("a,b,c,e,f\nk,l,m,s,d")`
+`csv.parse("a,b,c,e,f\nk,l,m,s,d", function(data) { sys.puts(data); })`
 
-Parses a string CSV value and emits 'data' events. Second argument can be an options object with the same attributes as above.
+Parses a string CSV value and emits 'data' events. Second argument must either be a callback function that will be passed the parsed rows OR an options object with the same attributes as above. If the options object is provided, the third argument must be the callback function.
