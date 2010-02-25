@@ -8,9 +8,11 @@ helper.testCase("Each Tests", {
     var count = 0;
     csv.each("basic_sample.csv").addListener("data", function(data) {
       count += 1;
-      sys.puts(count);
+    }).addListener("complete", function() {
+      test.assertTrue(count == 1800);
     });
-    test.assertTrue(count == 1800);
+    
+    
   }
 });
 
