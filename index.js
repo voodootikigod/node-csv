@@ -1,2 +1,2 @@
 // For your convenience
-process.mixin(exports, require('./lib/csv'));
+modules.exports = require('./lib/csv');
