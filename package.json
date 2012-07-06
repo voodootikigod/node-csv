@@ -1,0 +1,26 @@
+{
+  "name": "node-csv",
+  "version": "0.5.0",
+  "description": "Efficient Evented CSV Parsing in node.js",
+  "keywords": [
+    "csv",
+    "parse"
+  ],
+  "author": {
+    "name": "Chris Williams",
+    "email": "chris@iterativedesigns.com"
+  },
+  "contributors": [
+    {
+      "name": "Sean Soper",
+      "email": "sean.soper@gmail.com"
+    }
+  ],
+  "dependencies": {},
+  "main": "index",
+  "devDependencies": {},
+  "optionalDependencies": {},
+  "engines": {
+    "node": ">= 0.8"
+  }
+}
