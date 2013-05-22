@@ -1,18 +1,9 @@
-var helper = require('./test_helper'),
-    sys = require("sys"),
-    csv = require("../lib/csv");
+var assert = require('assert'),å
+    csv = require("../index");
 
-
-helper.testCase("Each Tests", {
-  testParseMultiLine: function(test) {
-    var count = 0;
-    csv.each("basic_sample.csv").addListener("data", function(data) {
-      count += 1;
-    }).addListener("complete", function() {
-      test.assertTrue(count == 1800);
-    });
-    
-    
-  }
+var count = 0;
+csv.each(__dirname + '/basic_sample.csv').on("data", function(data) {
+  count += 1;
+}).on("complete", function() {
+  assert.equal(count, 1800);
 });
-
